@@ -5,7 +5,7 @@ inspecode:
     thresholds: { num-issues: 999 }
 
   cpd:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 44 }
 
   eslint:
     auto-fix: true
@@ -15,10 +15,10 @@ inspecode:
     thresholds: { num-issues: 999 }
 
   grep:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 0 }
 
   jscpd:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 0 }
 
   jshint:
     thresholds: { num-issues: 999 }
@@ -28,7 +28,7 @@ inspecode:
 
   misspell:
     auto-fix: true
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 0 }
 
   npm-audit:
     thresholds: { num-issues: 999 }
@@ -38,28 +38,28 @@ inspecode:
 
   phpcs:
     auto-fix: true
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 173 }
 
   phpcsfixer:
     auto-fix: true
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 0 }
 
   phplint:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 457 }
 
   phpmd:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 15 }
 
   pmd:
     thresholds: { num-issues: 999 }
 
   prettier:
     auto-fix: true
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 2 }
 
   stylelint:
     auto-fix: true
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 0 }
 
   unused:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 20 }
