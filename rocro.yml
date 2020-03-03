@@ -4,7 +4,7 @@ inspecode:
     thresholds: { num-issues: 44 }
 
   fossology:
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 1 }
 
   grep:
     thresholds: { num-issues: 0 }
@@ -16,10 +16,29 @@ inspecode:
     auto-fix: true
     thresholds: { num-issues: 0 }
 
+  ##----------------------------------------------------------------------------
+  ## [on prod]
+  ##   + error messages in console.
+  ##      $ composer install --no-interaction --quiet --ignore-platform-reqs
+  ##      PHP Parse error:  syntax error, unexpected '?' in /home/rocro/src/github.com/tetrafolium/laravel/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 253
+  ## [on staging]
+  ##   + missing message in console.
+  ##      $ composer check-platform-reqs
+  ##      ext-mbstring   n/a       facade/ignition requires ext-mbstring (*)  missing
+  ##----------------------------------------------------------------------------
   phpcs:
     auto-fix: true
     thresholds: { num-issues: 173 }
+      # 173 issues on prod
+      # 174 issues on staging
 
+  ##----------------------------------------------------------------------------
+  ## [on prod] ... notice messages in console.
+  ##    Files that were not fixed due to errors reported during linting before fixing:
+  ##       1) /home/rocro/src/github.com/tetrafolium/laravel/app/Providers/RouteServiceProvider.php
+  ##       2) /home/rocro/src/github.com/tetrafolium/laravel/bootstrap/app.php
+  ## [on staging] ... no such notice messages.
+  ##----------------------------------------------------------------------------
   phpcsfixer:
     auto-fix: true
     thresholds: { num-issues: 0 }
@@ -29,6 +48,8 @@ inspecode:
 
   phpmd:
     thresholds: { num-issues: 15 }
+      # 15 issues on prod
+      # 14 issues on staging
 
   unused:
     thresholds: { num-issues: 20 }
