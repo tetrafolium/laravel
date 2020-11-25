@@ -9,8 +9,16 @@ inspecode:
   grep:
     thresholds: { num-issues: 0 }
 
+  htmlhint:
+    thresholds: { num-issues: 999 }
+
   jscpd:
     thresholds: { num-issues: 0 }
+
+  jshint:
+    options:
+      --extra-ext: [ '.html' ]
+    thresholds: { num-issues: 999 }
 
   misspell:
     auto-fix: true
@@ -24,11 +32,24 @@ inspecode:
     auto-fix: true
     thresholds: { num-issues: 0 }
 
+  ## deprecated
   phplint:
     thresholds: { num-issues: 457 }
 
   phpmd:
     thresholds: { num-issues: 14 }
+
+  prettier:
+    auto-fix: true
+    thresholds: { num-issues: 999 }
+
+  stylelint:
+    auto-fix: true
+    thresholds: { num-issues: 999 }
+
+  tidy:
+    auto-fix: true
+    thresholds: { num-issues: 999 }
 
   unused:
     thresholds: { num-issues: 20 }
